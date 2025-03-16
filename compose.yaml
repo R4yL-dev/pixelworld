@@ -1,0 +1,10 @@
+services:
+  mcsrv:
+    build:
+      context: ./mcsrv/
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./data_world:/opt/mcsrv/world
+    ports:
+      - 25565:25565
